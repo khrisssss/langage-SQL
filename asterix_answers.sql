@@ -61,12 +61,12 @@ JOIN fabriquer ON absorber.NumPotion = fabriquer.NumPotion
 WHERE fabriquer.NumHab = 3;
 
 
-SELECT DISTINCT buveur.Nom
-FROM habitant AS buveur
-JOIN absorber ON buveur.NumHab = absorber.NumHab
+SELECT DISTINCT habitant.Nom
+FROM habitant 
+JOIN absorber ON habitant.NumHab = absorber.NumHab
 JOIN fabriquer ON absorber.NumPotion = fabriquer.NumPotion
-JOIN habitant AS fabricant ON fabriquer.NumHab = fabricant.NumHab
-WHERE fabricant.Nom = 'Amnésix';
+JOIN habitant h2 ON fabriquer.NumHab = h2.NumHab
+WHERE h2.Nom = 'Amnésix';
 
 SELECT Nom
 FROM habitant
