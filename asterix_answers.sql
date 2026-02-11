@@ -99,7 +99,7 @@ JOIN categorie ON trophee.CodeCat = categorie.CodeCat
 WHERE habitant.Nom = 'Goudurix';
 
 SELECT MIN(DatePrise)
-FROM trophee;v
+FROM trophee;
 
 SELECT SUM(absorber.Quantite)
 FROM absorber
